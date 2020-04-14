@@ -68,7 +68,7 @@ namespace Memory
 		{
 			byte val = bytes[i];
 			memset((void*)(address + i), val, sizeof(BYTE));
-			printf("Byte[%x]: 0x%x", i, val);
+			//printf("Byte[%x]: 0x%x", i, val);
 		}
 
 
