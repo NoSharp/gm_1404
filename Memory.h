@@ -10,7 +10,7 @@ namespace Memory
 	const int OFFSET1404 = -0xE;
 	const int NOP1404 = 0x18;
 	
-	// Small function to allow me to generate 15 NOPS semi-dynamically.
+	// Small function to allow me to generate alot of Nop Instructions semi-dynamically.
 	BYTE* GenerateNops(int amount)
 	{
 		BYTE* nops = new BYTE[amount];
@@ -24,11 +24,9 @@ namespace Memory
 	// Get's the module info duh.
 	MODULEINFO GetModuleInfo(const char* mod_name)
 	{
-		//VMDOLPHIN_BLACK_START
 		MODULEINFO info;
 		HMODULE h_mod = GetModuleHandle(mod_name);
 		GetModuleInformation(GetCurrentProcess(), h_mod, &info, sizeof(MODULEINFO));
-		//VMDOLPHIN_BLACK_END
 		return info;
 	}
 
